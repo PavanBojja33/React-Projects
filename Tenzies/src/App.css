@@ -3,6 +3,11 @@
   box-sizing: border-box;
 }
 
+.game{
+  overflow: hidden  ;
+  position: relative;
+}
+
 main{
   background-color: rgb(245, 243, 243);
   height: 60vh;
@@ -16,6 +21,7 @@ main{
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+  overflow: hidden;
 }
 
 .head-container{
