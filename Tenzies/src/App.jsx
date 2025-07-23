@@ -21,13 +21,31 @@ const [dice,setDice]=useState(genAllNewDice());
 
   return (
     <main>
+      <div className="head-container">
+        <h1>Tenzies</h1>
+        <p>Roll the dice and try to get all 10 dice to show the same number. Click on dice to hold their value, then keep rolling the rest until they all match.</p>
+      </div>
+      <div className="result-container">
+        <div className="results">
+          <p className='head'>Rolls</p>
+          <p className='score'>0</p>
+        </div>
+        <div className="results">
+          <p className='head'>Time</p>
+          <p className='timeInS'>0s</p>
+        </div>
+        <div className="results">
+          <p className='head'>Best Time</p>
+          <p className='bestInS'>s</p>
+        </div>
+      </div>
       <div className="div-container">
         {dice.map(die => (
           <Die key={die.id} value={die.value} isHeld={die.isHeld} />
         ))}
       </div>
       <div className="reset">
-        <button onClick={()=>setDice(genAllNewDice())}>Roll</button>
+        <button onClick={()=>setDice(genAllNewDice())}>Roll Dice</button>
       </div>
     </main>
   )
